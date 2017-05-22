@@ -7,11 +7,11 @@ $(document).ready(function(){
     var body = $('#body').val();
     var newEntry = new Entry(title, body);
     var output = newEntry.getVowels(body);
-    output.forEach(function(element){
-      $('#result').append("<h5>" + title + "</h5>");
-      $('#result').append("<p>" + body + "</p>");
-      $('#result').append("<h6> number of vowels: " + output + "</h6>");
-    });
+    var output1 = newEntry.getConsonants(body);
+    $('#result').append("<h3>" + title + "</h3>");
+    $('#result').append("<p>" + body + "</p>");
+    $('#result').append("<h4> number of vowels: " + output + "</h4> ");
+    $('#result').append("<h4> number of consonants: " + output1 + "</h4> <hr>");
   });
 });
 

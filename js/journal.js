@@ -8,4 +8,9 @@ Entry.prototype.getVowels = function(body) {
   return m === null ? 0 : m.length;
 };
 
+Entry.prototype.getConsonants = function(body){
+  var m = body.match(/[bcdfghjklmnpqrstvwxyz]/gi);
+  return m === null ? 0 : m.length;
+};
+
 exports.entryModule = Entry;
