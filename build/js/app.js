@@ -18,12 +18,11 @@ Entry.prototype.getTeaser = function(body){
   var sentence = body.split('.');
   sentence = sentence[0];
   var splitSentence = sentence.split(" ");
-  console.log(splitSentence.length);
   if (splitSentence.length > 8) {
     sentence = splitSentence.slice(0, 7).join(" ");
   }
   return sentence;
-}
+};
 
 exports.entryModule = Entry;
 
@@ -54,6 +53,10 @@ $(document).ready(function(){
     $('#signup').hide();
     $('#solution').prepend('<p>Thank you, ' + email + ' has been added to our list!</p>');
   });
+});
+
+$(document).ready(function(){
+  $('#time').text(moment());
 });
 
 },{"./../js/journal.js":1}]},{},[2]);
