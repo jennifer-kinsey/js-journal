@@ -13,4 +13,15 @@ Entry.prototype.getConsonants = function(body){
   return m === null ? 0 : m.length;
 };
 
+Entry.prototype.getTeaser = function(body){
+  var sentence = body.split('.');
+  sentence = sentence[0];
+  var splitSentence = sentence.split(" ");
+  console.log(splitSentence.length);
+  if (splitSentence.length > 8) {
+    sentence = splitSentence.slice(0, 7).join(" ");
+  }
+  return sentence;
+}
+
 exports.entryModule = Entry;
