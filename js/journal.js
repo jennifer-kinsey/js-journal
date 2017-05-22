@@ -4,7 +4,7 @@ function Entry(title, body){
 }
 
 Entry.prototype.getVowels = function(body) {
-  var m = str.match(/[aeiou]/gi);
+  var m = body.match(/[aeiou]/gi);
   return m === null ? 0 : m.length;
 };
 
